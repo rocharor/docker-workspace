@@ -32,7 +32,7 @@ services:
 # Container de banco de dados (MySQL)
 ###########################
     mysql:
-        image: mysql:latest
+        image: mysql:5.7
         container_name: server-mysql
         ports:
           - "3306:3306"
@@ -40,6 +40,6 @@ services:
             - ./mysql/db:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: xxx
-            MYSQL_USER: xxx
-            MYSQL_PASSWORD: xxx
+            MYSQL_DATABASE: brecho_adventure
+            MYSQL_USER: root
+            MYSQL_PASSWORD: root
